@@ -13,6 +13,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import Layouts from 'vite-plugin-vue-layouts'
 import UnoCSS from 'unocss/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 import { VitePWA } from 'vite-plugin-pwa'
 
@@ -47,11 +48,13 @@ export default defineConfig({
         // 'vue-router'
         VueRouterAutoImports,
         '@vueuse/core'
-      ]
+      ],
+      resolvers: [ElementPlusResolver()],
     }),
     Components({
       directoryAsNamespace: true,
-      collapseSamePrefixes: true
+      collapseSamePrefixes: true,
+      resolvers: [ElementPlusResolver()],
     }),
     Layouts({
       layoutsDirs: 'src/layouts',

@@ -16,8 +16,8 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "types": [],
     "moduleResolution": "Bundler",
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "types": ["element-plus/global"]
   }
 }
