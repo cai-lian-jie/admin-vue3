@@ -1,17 +1,14 @@
 <template>
-  <div>home</div>
-  <div class="mb-4">
-    <el-button>Default</el-button>
-    <el-button type="primary">Primary</el-button>
-    <el-button type="success">Success</el-button>
-    <el-button type="info">Info</el-button>
-    <el-button type="warning">Warning</el-button>
-    <el-button type="danger">Danger</el-button>
-  </div>
+  <DarkModeToggle />
+  <FullScreen />
+  <div class="w-25 h-25 bg-red dark:bg-sky">块元素</div>
 </template>
 
 <script setup lang="ts">
 import { registerSW } from 'virtual:pwa-register'
+
+// const isDark = useDark()
+// const toggle = useToggle(isDark)
 
 onMounted(() => {
   registerSW({
@@ -25,6 +22,9 @@ onMounted(() => {
     }
   })
 })
+const handleClick = () => {
+  // toggle()
+}
 </script>
 
 <style scoped></style>

@@ -7,8 +7,19 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    DarkModeToggle: typeof import('./src/components/themes/DarkModeToggle.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
-    ReloadPrompt: typeof import('./src/components/ReloadPrompt.vue')['default']
+    ElCheckbox: typeof import('element-plus/es')['ElCheckbox']
+    ElColorPicker: typeof import('element-plus/es')['ElColorPicker']
+    ElDialog: typeof import('element-plus/es')['ElDialog']
+    ElInputNumber: typeof import('element-plus/es')['ElInputNumber']
+    ElSlider: typeof import('element-plus/es')['ElSlider']
+    ElSwitch: typeof import('element-plus/es')['ElSwitch']
+    FullScreen: typeof import('./src/components/themes/FullScreen.vue')['default']
+    Iconify: typeof import('./src/components/icon/Iconify.vue')['default']
+    IconList: typeof import('./src/components/icon/IconList.vue')['default']
+    IconPicker: typeof import('./src/components/icon/IconPicker.vue')['default']
+    ReloadPrompt: typeof import('./src/components/others/ReloadPrompt.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
