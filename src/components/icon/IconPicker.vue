@@ -38,7 +38,7 @@
 
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
-import type { IconPickerSubmitType } from './types'
+import type { IconPickerSubmitProps } from './types'
 
 defineProps({
   width: {
@@ -55,7 +55,7 @@ const num = ref(16)
 const iconRef = ref('')
 const [show, toggle] = useToggle(false)
 const emits = defineEmits<{
-  submit: [IconPickerSubmitType]
+  submit: [IconPickerSubmitProps]
   cancel: []
 }>()
 const handleClick = (i: string) => {

@@ -26,10 +26,10 @@
 //iconify element-plus
 import { loadIcons, Icon } from '@iconify/vue'
 import data from './icon-ep.json'
-import type { IconListType } from './types'
+import type { IconListProps } from './types'
 const choose = ref(-1)
 const modelValue = defineModel()
-const props = withDefaults(defineProps<IconListType>(), {
+const props = withDefaults(defineProps<IconListProps>(), {
   iconData: () => data,
   collection: 'ep',
   iconClass: 'text-3xl',

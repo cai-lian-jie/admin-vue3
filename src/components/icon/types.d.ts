@@ -1,9 +1,9 @@
-export interface IconPickerSubmitType {
+export interface IconPickerSubmitProps {
   icon: string
   color: string
   fontSize: number
 }
-export interface IconListType {
+export interface IconListProps {
   iconData: string[]
   collection: string
   iconClass: string
